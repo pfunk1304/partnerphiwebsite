@@ -2,7 +2,6 @@
 import { site, nav } from '../config';
 import Logo from './Logo.astro';
 import Button from './Button.astro';
-const path = Astro.url.pathname;
 ---
 <header class="border-b border-line/60">
   <div class="mx-auto flex max-w-site items-center justify-between gap-f21 px-f21 py-f21">
@@ -13,11 +12,7 @@ const path = Astro.url.pathname;
           <li>
             <a
               href={item.href}
-              class:list={[
-                'text-base no-underline transition-colors hover:text-gold',
-                path.startsWith(item.href) ? 'text-gold' : 'text-muted',
-              ]}
-              aria-current={path.startsWith(item.href) ? 'page' : undefined}
+              class="text-base text-muted no-underline transition-colors hover:text-gold"
             >
               {item.label}
             </a>

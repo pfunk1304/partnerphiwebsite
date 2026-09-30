@@ -54,7 +54,7 @@ const stats = [
         </p>
         <div class="mt-f55 flex flex-wrap gap-f13">
           <Button href={site.bookingUrl}>{site.ctaLabel}</Button>
-          <Button href="#ways" variant="ghost">How we work</Button>
+          <Button href="#how-we-work" variant="ghost">How we work</Button>
         </div>
       </div>
     </div>
@@ -99,7 +99,7 @@ const stats = [
   </section>
 
   <!-- Two ways to work -->
-  <section id="ways" class="scroll-mt-f21 border-t border-line/60 bg-ink-2">
+  <section id="how-we-work" class="scroll-mt-f21 border-t border-line/60 bg-ink-2">
     <div class="mx-auto max-w-site px-f21 py-f89">
       <p class="mb-f13 text-sm font-bold uppercase tracking-[0.18em] text-gold">How we work</p>
       <h2 class="mb-f55 max-w-2xl text-phi-1 font-bold tracking-tight md:text-phi-2">Two ways to work together.</h2>
@@ -121,14 +121,11 @@ const stats = [
           ))
         }
       </div>
-      <p class="mt-f34">
-        <a href="/services" class="font-bold text-gold underline-offset-4 hover:underline">Explore services</a>
-      </p>
     </div>
   </section>
 
   <!-- Credibility -->
-  <section class="border-t border-line/60">
+  <section id="experience" class="scroll-mt-f21 border-t border-line/60">
     <div class="mx-auto max-w-site px-f21 py-f89">
       <div class="mb-f55 grid gap-f21 lg:grid-cols-[1.618fr_1fr] lg:items-end">
         <div>
@@ -136,7 +133,7 @@ const stats = [
           <h2 class="text-phi-1 font-bold tracking-tight md:text-phi-2">Built in the Salesforce and Adobe ecosystems.</h2>
         </div>
         <p class="text-muted">
-          PartnerPhi is led by <a href="/about" class="text-paper underline underline-offset-4 hover:text-gold">Patrick Diab</a>,
+          PartnerPhi is led by <a href={site.personalSite} class="text-paper underline underline-offset-4 hover:text-gold" rel="noopener">Patrick Diab</a>,
           who has spent the last 8 to 9 years in partner and channel marketing.
         </p>
       </div>
@@ -158,7 +155,7 @@ const stats = [
   </section>
 
   <!-- Final CTA -->
-  <section class="border-t border-line/60 bg-ink-2">
+  <section id="contact" class="scroll-mt-f21 border-t border-line/60 bg-ink-2">
     <div class="mx-auto max-w-site px-f21 py-f89 text-center md:py-f144">
       <h2 class="mx-auto max-w-3xl text-phi-2 font-bold tracking-tight md:text-phi-3">Let's find your ratio.</h2>
       <p class="mx-auto mt-f21 max-w-xl text-lg text-muted">
