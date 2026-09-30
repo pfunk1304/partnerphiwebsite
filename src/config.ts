@@ -4,7 +4,7 @@ export const site = {
   name: 'PartnerPhi',
   url: 'https://partnerphi.com',
   description:
-    'Fractional partner marketing for B2B SaaS companies building in the Salesforce and Adobe ecosystems.',
+    'Fractional partner marketing for B2B SaaS companies that grow through platform ecosystems.',
   location: 'Las Vegas, NV',
 
   // Contact. Swap in the partnerphi.com address once it exists.
