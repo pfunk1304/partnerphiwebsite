@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://partnerphi.com/sitemap-index.xml

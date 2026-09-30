@@ -1,0 +1,173 @@
+---
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import GoldenSpiral from '../components/GoldenSpiral.astro';
+import { site } from '../config';
+
+const ways = [
+  {
+    name: 'Playbooks',
+    summary:
+      'Scoped, repeatable engagements that get a specific motion running fast, from partner launches to marketplace listings to major conference strategy.',
+    examples: [
+      'Partner launch playbook',
+      'Co-marketing campaign in a box',
+      'Marketplace listing optimization',
+      'Event strategy for a major partner conference',
+    ],
+  },
+  {
+    name: 'Advisory',
+    summary:
+      'Fractional partner marketing leadership. We build the function, the joint plans, and the campaigns alongside your team.',
+    examples: [
+      'Building the partner marketing function',
+      'Joint marketing plans with key partners',
+      'Integrated campaigns and sales enablement',
+      'Field alignment with partner teams',
+    ],
+  },
+];
+
+const stats = [
+  { value: '$36M+', label: 'new business ARR pipeline influenced' },
+  { value: '10K+', label: 'event leads per year from Salesforce events' },
+  { value: '25+', label: 'integrated campaigns owned per year' },
+  { value: '15+', label: 'years in B2B SaaS marketing' },
+];
+---
+<Base>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <GoldenSpiral
+      class="pointer-events-none absolute -right-[30%] top-1/2 w-[140%] -translate-y-1/2 text-gold opacity-25 sm:-right-[20%] sm:w-[110%] lg:-right-[22%] lg:w-[72%] lg:opacity-50"
+    />
+    <div class="relative mx-auto grid max-w-site px-f21 py-f89 md:py-f144 lg:grid-cols-[1.618fr_1fr]">
+      <div>
+        <p class="mb-f21 text-sm font-bold uppercase tracking-[0.18em] text-gold">Fractional partner marketing</p>
+        <h1 class="text-[2.25rem] font-bold leading-[1.08] tracking-tight sm:text-phi-2 md:text-phi-3">
+          Find the ratio that turns partnerships into pipeline.
+        </h1>
+        <p class="mt-f34 max-w-[34rem] text-lg text-muted md:text-xl md:leading-relaxed">
+          PartnerPhi is fractional partner marketing for B2B SaaS companies building in the Salesforce and Adobe
+          ecosystems.
+        </p>
+        <div class="mt-f55 flex flex-wrap gap-f13">
+          <Button href={site.bookingUrl}>{site.ctaLabel}</Button>
+          <Button href="#ways" variant="ghost">How we work</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="border-t border-line/60 bg-ink-2">
+    <div class="mx-auto grid max-w-site gap-f34 px-f21 py-f89 lg:grid-cols-[1fr_1.618fr] lg:gap-f89">
+      <div>
+        <p class="mb-f13 text-sm font-bold uppercase tracking-[0.18em] text-gold">The problem</p>
+        <h2 class="text-phi-1 font-bold tracking-tight md:text-phi-2">A partnership on paper doesn't sell.</h2>
+      </div>
+      <div class="space-y-f21 text-lg text-muted">
+        <p>
+          Most partner programs start with a signed agreement and a logo on a slide. Then nothing happens. The integration
+          is live, the listing is published, and pipeline never shows up.
+        </p>
+        <p class="text-paper">
+          Partner marketing is the difference between a partnership on paper and a partnership that sells.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why phi -->
+  <section class="border-t border-line/60">
+    <div class="mx-auto grid max-w-site items-center gap-f34 px-f21 py-f89 lg:grid-cols-[1fr_1.618fr] lg:gap-f89">
+      <div class="flex items-baseline gap-f21 lg:flex-col lg:gap-f8">
+        <span class="text-[5.5rem] leading-none text-gold md:text-[8.5rem]" aria-hidden="true">φ</span>
+        <span class="text-phi-1 font-bold tracking-tight text-paper">1.618</span>
+      </div>
+      <div>
+        <p class="mb-f13 text-sm font-bold uppercase tracking-[0.18em] text-gold">Why phi</p>
+        <h2 class="mb-f21 text-phi-1 font-bold tracking-tight md:text-phi-2">Two parts. One stronger whole.</h2>
+        <p class="text-lg text-muted">
+          The Golden Ratio, 1.618, shows up wherever two parts come together to make a whole that feels just right. The
+          best partnerships work the same way. Each side brings something the other can't, and together they build more
+          than either could alone. PartnerPhi exists to help you find that balance in your partner ecosystem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two ways to work -->
+  <section id="ways" class="scroll-mt-f21 border-t border-line/60 bg-ink-2">
+    <div class="mx-auto max-w-site px-f21 py-f89">
+      <p class="mb-f13 text-sm font-bold uppercase tracking-[0.18em] text-gold">How we work</p>
+      <h2 class="mb-f55 max-w-2xl text-phi-1 font-bold tracking-tight md:text-phi-2">Two ways to work together.</h2>
+      <div class="grid gap-f21 md:grid-cols-2">
+        {
+          ways.map((way) => (
+            <article class="flex flex-col rounded-sm border border-line bg-ink p-f34">
+              <h3 class="mb-f13 text-phi-1 font-bold text-paper">{way.name}</h3>
+              <p class="mb-f34 text-muted">{way.summary}</p>
+              <ul class="mt-auto space-y-f8 border-t border-line pt-f21">
+                {way.examples.map((ex) => (
+                  <li class="flex gap-f13 text-paper">
+                    <span class="mt-[0.7em] h-px w-f13 shrink-0 bg-gold" aria-hidden="true" />
+                    {ex}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+      <p class="mt-f34">
+        <a href="/services" class="font-bold text-gold underline-offset-4 hover:underline">Explore services</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Credibility -->
+  <section class="border-t border-line/60">
+    <div class="mx-auto max-w-site px-f21 py-f89">
+      <div class="mb-f55 grid gap-f21 lg:grid-cols-[1.618fr_1fr] lg:items-end">
+        <div>
+          <p class="mb-f13 text-sm font-bold uppercase tracking-[0.18em] text-gold">Experience</p>
+          <h2 class="text-phi-1 font-bold tracking-tight md:text-phi-2">Built in the Salesforce and Adobe ecosystems.</h2>
+        </div>
+        <p class="text-muted">
+          PartnerPhi is led by <a href="/about" class="text-paper underline underline-offset-4 hover:text-gold">Patrick Diab</a>,
+          who has spent the last 8 to 9 years in partner and channel marketing.
+        </p>
+      </div>
+      <dl class="grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-line bg-line lg:grid-cols-4">
+        {
+          stats.map((s) => (
+            <div class="bg-ink p-f21 md:p-f34">
+              <dt class="sr-only">{s.label}</dt>
+              <dd class="text-phi-1 font-bold text-gold md:text-phi-2">{s.value}</dd>
+              <dd class="mt-f8 text-sm text-muted md:text-base">{s.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <p class="mt-f21 text-sm text-muted">
+        Figures reflect Patrick's in-house partner marketing work, most recently at Sprout Social.
+      </p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="border-t border-line/60 bg-ink-2">
+    <div class="mx-auto max-w-site px-f21 py-f89 text-center md:py-f144">
+      <h2 class="mx-auto max-w-3xl text-phi-2 font-bold tracking-tight md:text-phi-3">Let's find your ratio.</h2>
+      <p class="mx-auto mt-f21 max-w-xl text-lg text-muted">
+        Tell us where your partner program stands today. We'll talk through what's working, what isn't, and where
+        partner marketing can move pipeline.
+      </p>
+      <div class="mt-f34">
+        <Button href={site.bookingUrl}>{site.ctaLabel}</Button>
+      </div>
+    </div>
+  </section>
+</Base>

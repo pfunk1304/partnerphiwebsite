@@ -1,0 +1,28 @@
+---
+// Fibonacci rectangles with the golden spiral traced through them.
+// The rectangle is 1618 x 1000, the Golden Ratio itself.
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+<svg class={className} viewBox="-4 -4 1626 1008" fill="none" aria-hidden="true" focusable="false">
+  <g stroke="currentColor" stroke-width="2" opacity="0.35" vector-effect="non-scaling-stroke">
+    <rect x="0" y="0" width="1618" height="1000" />
+    <line x1="1000" y1="0" x2="1000" y2="1000" />
+    <line x1="1000" y1="618" x2="1618" y2="618" />
+    <line x1="1236" y1="618" x2="1236" y2="1000" />
+    <line x1="1000" y1="764" x2="1236" y2="764" />
+    <line x1="1146" y1="618" x2="1146" y2="764" />
+    <line x1="1146" y1="708" x2="1236" y2="708" />
+    <line x1="1180" y1="708" x2="1180" y2="764" />
+    <line x1="1146" y1="730" x2="1180" y2="730" />
+  </g>
+  <path
+    stroke="currentColor"
+    stroke-width="3"
+    stroke-linecap="round"
+    vector-effect="non-scaling-stroke"
+    d="M0 1000 A1000 1000 0 0 1 1000 0 A618 618 0 0 1 1618 618 A382 382 0 0 1 1236 1000 A236 236 0 0 1 1000 764 A146 146 0 0 1 1146 618 A90 90 0 0 1 1236 708 A56 56 0 0 1 1180 764 A34 34 0 0 1 1146 730"
+  />
+</svg>

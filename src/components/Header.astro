@@ -1,0 +1,39 @@
+---
+import { site, nav } from '../config';
+import Logo from './Logo.astro';
+import Button from './Button.astro';
+const path = Astro.url.pathname;
+---
+<header class="border-b border-line/60">
+  <div class="mx-auto flex max-w-site items-center justify-between gap-f21 px-f21 py-f21">
+    <Logo />
+    <nav aria-label="Main" class="flex items-center gap-f21 md:gap-f34">
+      <ul class="hidden items-center gap-f34 sm:flex">
+        {nav.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={[
+                'text-base no-underline transition-colors hover:text-gold',
+                path.startsWith(item.href) ? 'text-gold' : 'text-muted',
+              ]}
+              aria-current={path.startsWith(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="hidden md:block"><Button href={site.bookingUrl}>{site.ctaLabel}</Button></div>
+      <details class="relative sm:hidden">
+        <summary class="cursor-pointer list-none rounded-sm border border-line px-f13 py-f8 text-sm text-paper">Menu</summary>
+        <ul class="absolute right-0 z-10 mt-f8 w-48 rounded-sm border border-line bg-ink-2 p-f13">
+          {nav.map((item) => (
+            <li><a href={item.href} class="block py-f8 text-paper no-underline hover:text-gold">{item.label}</a></li>
+          ))}
+          <li><a href={site.bookingUrl} class="block py-f8 font-bold text-gold no-underline">{site.ctaLabel}</a></li>
+        </ul>
+      </details>
+    </nav>
+  </div>
+</header>

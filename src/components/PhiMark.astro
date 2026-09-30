@@ -1,0 +1,11 @@
+---
+// The φ symbol drawn as lines, used as the placeholder logo mark and favicon.
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+<svg class={className} viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <ellipse cx="16" cy="16" rx="9" ry="6.5" stroke="currentColor" stroke-width="2.4" />
+  <line x1="16" y1="3" x2="16" y2="29" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+</svg>
