@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+/*
+  Design tokens. Change the colors here to restyle the whole site.
+  Type sizes follow the Golden Ratio (each step is 1.618x the last).
+  Spacing follows Fibonacci numbers (8, 13, 21, 34, 55, 89).
+*/
+@theme {
+  --color-ink: #0e1217; /* page background */
+  --color-ink-2: #151b22; /* alternate section background */
+  --color-line: #2a323c; /* borders and dividers */
+  --color-paper: #eceae4; /* main text */
+  --color-muted: #a3aab4; /* secondary text */
+  --color-gold: #d4a94f; /* accent */
+  --color-gold-bright: #e6bf6a; /* accent hover */
+
+  --font-sans: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+  --text-phi-0: 1rem;
+  --text-phi-0--line-height: 1.618;
+  --text-phi-1: 1.618rem;
+  --text-phi-1--line-height: 1.3;
+  --text-phi-2: 2.618rem;
+  --text-phi-2--line-height: 1.12;
+  --text-phi-3: 4.236rem;
+  --text-phi-3--line-height: 1.02;
+
+  --spacing-f8: 8px;
+  --spacing-f13: 13px;
+  --spacing-f21: 21px;
+  --spacing-f34: 34px;
+  --spacing-f55: 55px;
+  --spacing-f89: 89px;
+  --spacing-f144: 144px;
+
+  --container-site: 72rem;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    font-size: 1.0625rem;
+    line-height: 1.618;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+}

@@ -1,0 +1,16 @@
+---
+import { site } from '../config';
+import PhiMark from './PhiMark.astro';
+---
+<a href="/" class="inline-flex items-center gap-f8 text-paper no-underline" aria-label={`${site.name} home`}>
+  {site.logoSrc ? (
+    <img src={site.logoSrc} alt={site.name} class="h-8 w-auto" />
+  ) : (
+    <>
+      <PhiMark class="h-7 w-7 text-gold" />
+      <span class="text-[1.3rem] font-bold tracking-tight">
+        Partner<span class="text-gold">Phi</span>
+      </span>
+    </>
+  )}
+</a>

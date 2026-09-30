@@ -1,0 +1,26 @@
+---
+import { site, nav } from '../config';
+import Logo from './Logo.astro';
+const year = new Date().getFullYear();
+---
+<footer class="border-t border-line/60">
+  <div class="mx-auto grid max-w-site gap-f34 px-f21 py-f55 md:grid-cols-[1.618fr_1fr]">
+    <div class="space-y-f13">
+      <Logo />
+      <p class="max-w-md text-muted">Fractional partner marketing for B2B SaaS. Based in {site.location}.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-f21 text-base">
+      <ul class="space-y-f8">
+        {nav.map((item) => (
+          <li><a href={item.href} class="text-muted no-underline hover:text-gold">{item.label}</a></li>
+        ))}
+      </ul>
+      <ul class="space-y-f8">
+        <li><a href={`mailto:${site.email}`} class="text-muted no-underline hover:text-gold">Email</a></li>
+        <li><a href={site.linkedin} class="text-muted no-underline hover:text-gold" rel="noopener">LinkedIn</a></li>
+        <li><a href={site.personalSite} class="text-muted no-underline hover:text-gold" rel="noopener">patrickdiab.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mx-auto max-w-site px-f21 pb-f34 text-sm text-muted">© {year} {site.name}. All rights reserved.</div>
+</footer>

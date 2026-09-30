@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Button from '../components/Button.astro';
+import { site } from '../config';
+---
+<Base title="Contact" description="Book an intro call with PartnerPhi.">
+  <section class="mx-auto max-w-site px-f21 py-f89">
+    <h1 class="text-phi-2 font-bold tracking-tight md:text-phi-3">Let's talk.</h1>
+    <p class="mt-f21 max-w-xl text-lg text-muted">
+      Tell us a little about your company and your partner program, and we'll set up a time to talk.
+    </p>
+    <div class="mt-f34 flex flex-wrap items-center gap-f21">
+      <Button href={site.bookingUrl}>{site.ctaLabel}</Button>
+      <a href={`mailto:${site.email}`} class="text-paper underline underline-offset-4 hover:text-gold">{site.email}</a>
+    </div>
+  </section>
+</Base>
