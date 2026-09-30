@@ -38,6 +38,7 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
     background-color: var(--color-ink);
     color: var(--color-paper);
     font-family: var(--font-sans);
@@ -54,5 +55,11 @@
   ::selection {
     background: var(--color-gold);
     color: var(--color-ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
