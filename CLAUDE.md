@@ -50,7 +50,7 @@ Who it's for (draft): B2B SaaS companies that sell through or alongside large pl
 Use this for the About page and founder credibility sections. All facts below are accurate; do not embellish.
 
 * Born and raised Las Vegan; based in Las Vegas, NV
-* 15+ years in B2B SaaS marketing; focused on partner and channel marketing for the last 8 to 9 years
+* 15+ years in B2B SaaS marketing; focused on partner and channel marketing for the last 10 years (including co-selling partnerships at ALICE Receptionist with Konica Minolta, JLL and others)
 * Specializes in GTM strategy across complex enterprise partner ecosystems, especially Salesforce and Adobe
 
 Career highlights:
