@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- Source for public/og.png (1200x630 share image). Re-render with a headless browser at 1200x630. -->
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; background: #0e1217; color: #eceae4; font-family: Arial, Helvetica, sans-serif; position: relative; overflow: hidden; }
+  .spiral { position: absolute; right: -250px; top: 50%; width: 900px; transform: translateY(-50%); color: #d4a94f; opacity: .55; }
+  .wrap { position: absolute; left: 89px; top: 0; bottom: 0; width: 700px; display: flex; flex-direction: column; justify-content: center; }
+  .logo { display: flex; align-items: center; gap: 13px; font-size: 34px; font-weight: bold; letter-spacing: -0.5px; margin-bottom: 55px; }
+  .logo span { color: #d4a94f; }
+  .logo svg { width: 40px; height: 40px; color: #d4a94f; }
+  h1 { font-size: 64px; line-height: 1.06; letter-spacing: -1.5px; }
+  p { margin-top: 34px; font-size: 26px; line-height: 1.4; color: #a3aab4; max-width: 620px; }
+  .rule { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: #d4a94f; }
+</style>
+</head>
+<body>
+  <svg class="spiral" viewBox="-4 -4 1626 1008" fill="none">
+    <g stroke="currentColor" stroke-width="2" opacity="0.4">
+      <rect x="0" y="0" width="1618" height="1000" />
+      <line x1="1000" y1="0" x2="1000" y2="1000" /><line x1="1000" y1="618" x2="1618" y2="618" />
+      <line x1="1236" y1="618" x2="1236" y2="1000" /><line x1="1000" y1="764" x2="1236" y2="764" />
+      <line x1="1146" y1="618" x2="1146" y2="764" /><line x1="1146" y1="708" x2="1236" y2="708" />
+      <line x1="1180" y1="708" x2="1180" y2="764" /><line x1="1146" y1="730" x2="1180" y2="730" />
+    </g>
+    <path stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M0 1000 A1000 1000 0 0 1 1000 0 A618 618 0 0 1 1618 618 A382 382 0 0 1 1236 1000 A236 236 0 0 1 1000 764 A146 146 0 0 1 1146 618 A90 90 0 0 1 1236 708 A56 56 0 0 1 1180 764 A34 34 0 0 1 1146 730" />
+  </svg>
+  <div class="wrap">
+    <div class="logo">
+      <svg viewBox="0 0 32 32" fill="none"><ellipse cx="16" cy="16" rx="9" ry="6.5" stroke="currentColor" stroke-width="2.4"/><line x1="16" y1="3" x2="16" y2="29" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <div>Partner<span>Phi</span></div>
+    </div>
+    <h1>Find the ratio that turns partnerships into pipeline.</h1>
+    <p>Fractional partner marketing for B2B SaaS in the Salesforce and Adobe ecosystems.</p>
+  </div>
+  <div class="rule"></div>
+</body>
+</html>
