@@ -12,7 +12,7 @@ export const site = {
 
   // Where every "Book an intro call" button points. When you have a Cal.com or
   // Calendly link, paste it here (for example 'https://cal.com/partnerphi/intro').
-  bookingUrl: 'mailto:diabpatrick@gmail.com?subject=PartnerPhi%20intro%20call',
+  bookingUrl: 'mailto:patrick@partnerphi.com?subject=PartnerPhi%20intro%20call',
   ctaLabel: 'Book an intro call',
 
   linkedin: 'https://www.linkedin.com/in/patrickdiab',
